@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.artur.aehr.core.GPS;
-
+//unused class
 public class MainActivity extends AppCompatActivity {
     Button GPSButton;
     Button mapButton;

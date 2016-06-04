@@ -12,6 +12,7 @@ import android.support.v4.app.ActivityCompat;
 
 import com.example.artur.aehr.GPS_Activity;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class GPS extends Thread implements LocationListener {
     private Criteria cr;
     private Location loc;
     private String bestProvider;
-    private List<Point> history = new LinkedList<Point>();
+    private ArrayList<Point> history = new ArrayList<>();
     private GPS_Activity GPS_actv;
     private List<IActivity> ActivityList;
 
@@ -57,6 +58,10 @@ public class GPS extends Thread implements LocationListener {
         if (gps == null)
             gps = new GPS();
         return gps;
+    }
+    public void cleanHistory(){
+
+        history = new ArrayList<>();
     }
 
     @Override
@@ -128,7 +133,7 @@ public class GPS extends Thread implements LocationListener {
         return loc;
     }
 
-    public List<Point> getHistory() {
+    public ArrayList<Point> getHistory() {
         return history;
     }
 

@@ -1,8 +1,11 @@
 package com.example.artur.aehr;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+
 import com.example.artur.aehr.core.GPS;
 import com.example.artur.aehr.core.IActivity;
 import com.example.artur.aehr.core.Point;
@@ -55,7 +58,11 @@ public class MapActivity extends AppCompatActivity implements IActivity {
         mapView.invalidate();
 
     }
+    public void onClickGPS(View v) {
+        Intent myintent = new Intent(MapActivity.this, GPS_Activity.class);
+        MapActivity.this.startActivity(myintent);
 
+    }
     public void refresh() {
         GeoPoint punkt = new GeoPoint(gps.getLoc().getLatitude(), gps.getLoc().getLongitude());
         myPath.addPoint(punkt);
