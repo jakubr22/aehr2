@@ -2,8 +2,8 @@ package com.example.artur.aehr;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -120,7 +120,7 @@ public class CaloriesCounterActivity extends AppCompatActivity {
             GPS gps = GPS.getGPS();      //<-- tutaj przechowywana jest lista zawierajaca obiekty Point ktore przechowuja informacje o lokalizacji
                                         // z Location mozna duzo informacji wyciagnąc, np: getSpeed
             System.out.println("2Hello");
-            Point prev = gps.getHistory().get(0);
+            Point prev = gps.getHistory().get(1);
             System.out.println("Hello 3");
 
             String weight = sharedPreferences.getString("weight","");
@@ -130,12 +130,12 @@ public class CaloriesCounterActivity extends AppCompatActivity {
             }
 
             double calories=0;
-            for (Point i : gps.getHistory()){
+            /*for (Point i : gps.getHistory()){
                 if (prev!= i) {
                     calories+=getKcalNaKgNaSecBiegu(i.getSpeed()) * getTimeInterval(prev, i) * userWeight  ;
                     prev = i;
                 }
-            }
+            }*/
             TextView kalorie = (TextView)findViewById(R.id.textView11);
             kalorie.setText(String.valueOf(calories) + " kcal");
 
