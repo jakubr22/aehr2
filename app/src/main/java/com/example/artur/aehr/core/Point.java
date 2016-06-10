@@ -15,12 +15,13 @@ public class Point {
     private double altitude;
     private float speed;
     Date date;
-    int nr=0;
+    static private int nr=0;
 
 
 
     public Point(Location loc) {
-        System.out.println("dodano punkt "+nr++);
+        System.out.println("dodano punkt "+nr);
+        nr++;
         longitude = loc.getLongitude(); //długość
         latitude = loc.getLatitude();   //szerokość
         altitude = loc.getAltitude();   //wysokość

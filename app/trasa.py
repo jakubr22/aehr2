@@ -23,7 +23,7 @@ tn.write("geo fix 16.9507 52.403309\r\n".encode('ascii'))
 time.sleep(step)
 tn.write("geo fix 16.9512 52.40379\r\n".encode('ascii'))
 time.sleep(step)
-tn.write("geo fix 16.9523 52.40505\r\n".encode('ascii'))
+tn.write("geo fix 16.95230 52.40305\r\n".encode('ascii'))
 
 
 input("exit")
