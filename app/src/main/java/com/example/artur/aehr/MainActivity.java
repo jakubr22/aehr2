@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         v1 = (TextView) findViewById(R.id.textView1);
         GPSButton = (Button) findViewById(R.id.button1);
         mapButton = (Button) findViewById(R.id.button2);
