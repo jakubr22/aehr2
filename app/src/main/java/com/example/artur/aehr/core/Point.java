@@ -16,21 +16,14 @@ public class Point {
     private float speed;
     Date date;
 
-    public Point(Location loc, Date date) {
+
+
+    public Point(Location loc) {
         longitude = loc.getLongitude(); //długość
         latitude = loc.getLatitude();   //szerokość
         altitude = loc.getAltitude();   //wysokość
-        speed = loc.getSpeed();
-        this.date = date;
-
-    }
-
-    public Point(Location loc) {
-        longitude = loc.getLongitude();
-        latitude = loc.getLatitude();
-        altitude = loc.getAltitude();
         this.date = new Date();
-
+        speed = loc.getSpeed();
 
     }
 
