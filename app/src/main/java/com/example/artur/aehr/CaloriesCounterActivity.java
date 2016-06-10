@@ -120,6 +120,7 @@ public class CaloriesCounterActivity extends AppCompatActivity {
             GPS gps = GPS.getGPS();      //<-- tutaj przechowywana jest lista zawierajaca obiekty Point ktore przechowuja informacje o lokalizacji
                                         // z Location mozna duzo informacji wyciagnąc, np: getSpeed
             System.out.println("2Hello");
+            System.out.println("pojemosc\n\n wynosi "+ gps.getHistory().size() + "\n\n!!\n");
             Point prev = gps.getHistory().get(1);
             System.out.println("Hello 3");
 
@@ -143,7 +144,7 @@ public class CaloriesCounterActivity extends AppCompatActivity {
         }
         else {
             button.setText("Licz");
-            GPS.getGPS().cleanHistory();
+            //GPS.getGPS().cleanHistory();
         }
 
     }

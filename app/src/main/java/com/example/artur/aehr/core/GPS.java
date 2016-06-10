@@ -25,7 +25,7 @@ public class GPS extends Thread implements LocationListener {
     private Criteria cr;
     private Location loc;
     private String bestProvider;
-    private ArrayList<Point> history = new ArrayList<>();
+    static private ArrayList<Point> history = new ArrayList<>();
     private GPS_Activity GPS_actv;
     private List<IActivity> ActivityList;
 
@@ -59,10 +59,10 @@ public class GPS extends Thread implements LocationListener {
             gps = new GPS();
         return gps;
     }
-    public void cleanHistory(){
+    /*public void cleanHistory(){
 
         history = new ArrayList<>();
-    }
+    }*/
 
     @Override
     public void onLocationChanged(Location location) {
