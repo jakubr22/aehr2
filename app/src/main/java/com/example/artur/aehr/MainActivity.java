@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     public void onClickGPS(View v) {
         Intent myintent = new Intent(MainActivity.this, GPS_Activity.class);
         MainActivity.this.startActivity(myintent);
-
     }
 
     public void onClickMap(View v) {
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         v1 = (TextView) findViewById(R.id.textView1);
         GPSButton = (Button) findViewById(R.id.button1);
         mapButton = (Button) findViewById(R.id.button2);
